@@ -30,3 +30,29 @@ Next action tied to value increase.
 ## 🧱 Sweep Note (safe mode)
 Timestamp: 2025-12-26T03:03:41Z
 This repo was updated by c13b0 safe sweeper.
+
+---
+
+## 🧱🤖🧱 MACHINE_DESCRIPTOR (C13B0)
+
+machine_name: $(basename "$(pwd)")
+machine_role: machine
+inputs:
+  - type: query
+  - type: image
+  - type: script
+outputs:
+  - type: index
+  - type: token
+  - type: commit
+dependencies:
+  - mongoose.os
+  - infinity-brain-111
+execution:
+  trigger: github_action | termux_import
+token_behavior:
+  mint_on_success: true
+  token_type: bronze
+notes:
+  - auto-appended by C13B0, safe to edit
+
